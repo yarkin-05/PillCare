@@ -1,0 +1,7 @@
+{
+  "name": "pillcare",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

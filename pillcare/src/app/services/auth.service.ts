@@ -29,7 +29,7 @@ export class AuthService {
   }
 
   //add the signUp method
-  async signUpUser(email: string, password: string) {
+  async signUp(email: string, password: string) {
     try{
       return createUserWithEmailAndPassword(this.auth, email, password);
     } catch (e){

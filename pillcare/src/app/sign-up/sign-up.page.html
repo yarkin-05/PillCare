@@ -19,10 +19,7 @@
       <ion-label position="floating">Confirm Password</ion-label>
       <ion-input type="password" name="confirmPassword" ngModel required></ion-input>
     </ion-item>
-    <ion-button type="submit" expand="block">Sign Up</ion-button>
+    <ion-button type="submit" [disabled]="form.invalid" expand="block">Sign Up</ion-button>
   </form>
 
-  <div>                   
-    <h6 (click)="goToLogin()"> Login</h6>
-  </div>
 </ion-content>

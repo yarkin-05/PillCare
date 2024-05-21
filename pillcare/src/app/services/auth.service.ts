@@ -52,12 +52,7 @@ export class AuthService {
 
   //add the signOut method
   signOut() {
-    try{
-      return signOut(this.auth);
-    } catch (e){
-      console.error(e);
-      return null;
-    }
+    return signOut(this.auth);
   }
 
   

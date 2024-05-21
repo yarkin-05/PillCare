@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-password-reset',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PasswordResetPage implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router, private alertCtrl: AlertController) { }
 
   ngOnInit() {
   }
 
+  async resetPassword(form: any):Promise<void>{
+    this.authService.resetPassword(form.value.email).
+    then(
+      async () => {
+        const alert = await this.alertCtrl.create({
+          message: 'check email to reset password',
+          buttons:[{ text:'ok', role:'cancel', handler:()=>{
+            this.router.navigateByUrl('login');
+          }}]
+        });
+        await alert.present();
+      },
+      async error =>{
+        const errorAlert = await this.alertCtrl.create({
+          message: error.message,
+          buttons:[{text:'ok', role:'cancel'}]
+        });
+        await errorAlert.present();
+      }
+    )
+  }
 }

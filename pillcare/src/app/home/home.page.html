@@ -4,27 +4,27 @@
     style="font-size: xxx-large; 
       text-align: left; 
       font-family:'Times New Roman';
-      color: #D85948;">
-      Pill
-    </ion-title>
-    <ion-title 
-    style="font-size: xxx-large; 
-      text-align: left; margin-left: 75px; 
+      color: #D85948;
+      font-weight: bold;
+      background-color: #BFCBCD;">
+      Pill 
+      <span style="font-size: xxx-large;
       font-family:Brush Script MT, Brush Script Std, cursive;
-      color: #DD7D70;">
-      Pal
+      color: #DD7D70; 
+      font-weight: normal;">
+      Pal</span>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
-  
-  <svg viewBox="0 0 500 500">
+  <div class="circle"></div>
+
+  <svg viewBox="0 0 500 500" style="position: relative; top: -300px">
     <path id="curve" 
     fill="transparent" 
     d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
-    <text width="500" style="color:#DD7D70">
+    <text width="500">
       <textPath xlink:href="#curve" 
       style="font-size: 40px; 
         text-align: center; 
@@ -36,17 +36,43 @@
     </text>
   </svg>
 
+  <p style="font-size: 40px;
+  font-family:Brush Script MT, Brush Script Std, cursive;
+  color: #D85948;
+  text-align: center;
+  position: relative;
+  top: -650px">Dia:</p>
+
+  <p style="font-size: 100px;
+  font-family:'Times New Roman';
+  color: #D85948;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  top: -720px">{{dia}}</p>
+
+  <p style="font-size: 40px;
+  font-family:Brush Script MT, Brush Script Std, cursive;
+  color: #D85948;
+  text-align: center;
+  position: relative;
+  top: -825px">{{mes}}</p>
+
   <p style="font-size: 25px; 
   text-align: center; 
   font-family:'Times New Roman'; 
   font-weight: bold;
-  color: #DD7D70;">{{ nombre }}</p>
+  color: #DD7D70;
+  position: relative;
+  top: -800px">{{ nombre }}</p>
 
   <p style="font-size: 30px; 
   text-align: center; 
   font-family:'Times New Roman'; 
   font-weight: bold;
-  color: #D85948;">{{ dosis }} mg</p>
+  color: #D85948;
+  position: relative;
+  top: -820px">{{ dosis }} mg</p>
 
   <ion-button expand="block" 
   fill="outline" 
@@ -56,7 +82,11 @@
   --background-activated: #f7c9c2;
   --border-color: #D85948;
   --border-style: solid;
-  --border-width: 1px;">
+  --border-width: 1px;
+  font-family:'Times New Roman'; 
+  font-weight: bold;
+  position: relative;
+  top: -800px">
     <ion-icon slot="start" name="heart"></ion-icon>Agregar recordatorio
   </ion-button>
   <ion-button expand="block" 
@@ -67,7 +97,11 @@
   --background-activated: #e8edee;
   --border-color: #BFCBCD;
   --border-style: solid;
-  --border-width: 1px;">
+  --border-width: 1px;
+  font-family:'Times New Roman'; 
+  font-weight: bold;
+  position: relative;
+  top: -800px">
     <ion-icon slot="start" name="heart"></ion-icon>Agregar pastilla nueva
   </ion-button>
   <ion-button expand="block" 
@@ -78,11 +112,10 @@
   --background-activated: #fff8f3;
   --border-color: #E9C7B0;
   --border-style: solid;
-  --border-width: 1px;">
+  --border-width: 1px;
+  font-family:'Times New Roman'; 
+  font-weight: bold;
+  position: relative;
+  top: -800px">
     <ion-icon slot="start" name="heart"></ion-icon>Ajustes
   </ion-button>
-
-</ion-content>
-<div style="margin-left: 25%; margin-right: 25%;">
-  <ion-button expand="block" fill="outline">Inicia Sesión</ion-button>
-</div>

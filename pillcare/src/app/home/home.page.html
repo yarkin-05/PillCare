@@ -18,7 +18,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="circle"></div>
+  <div style="text-align: center;" class="circle"></div>
 
   <svg viewBox="0 0 500 500" style="position: relative; top: -300px">
     <path id="curve" 
@@ -86,9 +86,11 @@
   font-family:'Times New Roman'; 
   font-weight: bold;
   position: relative;
-  top: -800px">
+  top: -800px"
+  [routerLink]="['/recordatorio']">
     <ion-icon slot="start" name="heart"></ion-icon>Agregar recordatorio
   </ion-button>
+  
   <ion-button expand="block" 
   fill="outline" 
   style="margin-left: 20%; 
@@ -101,9 +103,11 @@
   font-family:'Times New Roman'; 
   font-weight: bold;
   position: relative;
-  top: -800px">
+  top: -800px" 
+  [routerLink]="['/pastilla']">
     <ion-icon slot="start" name="heart"></ion-icon>Agregar pastilla nueva
   </ion-button>
+
   <ion-button expand="block" 
   fill="outline" 
   style="margin-left: 20%; 
@@ -116,6 +120,8 @@
   font-family:'Times New Roman'; 
   font-weight: bold;
   position: relative;
-  top: -800px">
+  top: -800px"
+  [routerLink]="['/ajustes']">
     <ion-icon slot="start" name="heart"></ion-icon>Ajustes
   </ion-button>
+  </ion-content>

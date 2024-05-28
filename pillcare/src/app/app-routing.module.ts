@@ -23,6 +23,18 @@ const routes: Routes = [
     path: 'password-reset',
     loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
   },
+  {
+    path: 'pastilla',
+    loadChildren: () => import('./pastilla/pastilla.module').then( m => m.PastillaPageModule)
+  },
+  {
+    path: 'recordatorio',
+    loadChildren: () => import('./recordatorio/recordatorio.module').then( m => m.RecordatorioPageModule)
+  },
+  {
+    path: 'ajustes',
+    loadChildren: () => import('./ajustes/ajustes.module').then( m => m.AjustesPageModule)
+  },
 ];
 
 @NgModule({

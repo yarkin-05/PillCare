@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,14 @@ export class HomePage {
   dia = 11;
   mes = "mayo"
 
-  constructor() {}
+  constructor(private router: Router) {}
 
+
+  navigateToPastilla(){
+    this.router.navigateByUrl('/pastilla')
+  }
+
+  onCloc(){
+    console.log('cli')
+  }
 }

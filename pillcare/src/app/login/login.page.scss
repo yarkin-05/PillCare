@@ -1,0 +1,53 @@
+ion-content {
+  --background: #f9f9f9; /* Change the background color of the content */
+}
+
+ion-card {
+  display: flex; /* Display the card as a flexbox */
+  gap: 20px; /* Add some space between the card elements */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add some shadow to the card */
+  transition: 0.3s; /* Add transition effects */
+  width: 80%; /* Set the width of the card */
+  margin: auto; /* Center the card */
+  margin-top: 150px;
+
+}
+
+.card-image {
+  width: 100%; /* Set the width of the image */
+  height: auto; /* Set the height of the image */
+  border-radius: 5px; /* Add some border radius to the image */
+}
+
+
+.forgot-password{
+  text-decoration: underline;
+  color: #007bff;
+  text-align: right;
+  cursor: pointer;
+}
+
+.register{
+  text-decoration: underline;
+  color: #007bff;
+  text-align: left;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.login-logo {
+  width: 100%; /* Set the width of the logo */
+  height: auto; /* Set the height of the logo */
+}
+
+ion-card-header {
+  text-align: center; /* Center the text in the card header */
+  font-size: 24px; /* Set the font size of the card header */
+  color: #333; /* Set the color of the card header */
+}

@@ -1,0 +1,68 @@
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <div class="card-image">
+      <!-- Aqui entra la imagen del login para decorar-->
+      <img 
+      src="assets/img/pillcareLogin.jpeg" 
+      alt="Ionic logo" 
+      class="login-logo"
+      >
+    </div>
+
+
+
+    <div>
+      <ion-card-header>
+        <ion-card-subtitle>Login</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-item>
+
+        <ion-input 
+          placeholder="Email" 
+          type="email" 
+          [(ngModel)]="email"
+        >
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input 
+        type="password" placeholder="Password" [(ngModel)]="password"
+        ></ion-input>
+      </ion-item>
+    
+      <ion-button expand="block" (click)="login()">Login</ion-button>
+    
+      <ion-grid>
+        <ion-row>
+          <ion-col> 
+            <div class="register"> 
+              <a [routerLink]="['/signup']"
+              >
+              Register 
+              </a>
+            </div>
+          </ion-col>
+          <ion-col> 
+            <div id="present-alert" class="forgot-password"> 
+              Forgot Password 
+            </div>
+            <ion-alert
+              trigger="present-alert"
+              header="Please enter your email address" 
+              [buttons]="alertButtons"
+              [inputs]="alertInputs"
+            ></ion-alert>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-card>
+
+
+
+  
+</ion-content>

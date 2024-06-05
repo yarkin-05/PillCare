@@ -1,0 +1,78 @@
+// Variables for color scheme and spacing
+$primary-color: #df4782;
+$secondary-color: #eecfc8;
+$error-color: #f44336;
+$input-border-color: #F8F7F4;
+$input-focus-border-color: $primary-color;
+$spacing-unit: 16px;
+
+:host {
+  ion-header {
+    --background: #eecfc8;
+    ion-toolbar {
+      --background: #F8F7F4;
+      ion-title {
+        color: rgb(248, 247, 244);
+        font-weight: bold;
+      }
+    }
+  }
+
+  ion-content {
+    --background: #F8F7F4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing-unit * 2;
+
+    ion-item {
+      width: 100%;
+      max-width: 400px;
+      --border-color: #F8F7F4;
+      margin-bottom: $spacing-unit;
+
+      ion-label {
+        color: #DD7D70;
+        font-weight: bold;
+      }
+
+      ion-input {
+        padding: $spacing-unit / 2;
+        --background: $input-background-color;
+        &:focus {
+          --border-color: #F8F7F4;
+        }
+      }
+    }
+
+    ion-button {
+        color: #DD7D70;
+        width: 100%;
+        max-width: 400px;
+        margin-top: $spacing-unit;
+        --background: #eecfc8;
+        --color: #eecfc8;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          --background: #eecfc8;
+        }
+  
+        &:active {
+          --background: #DD7D70;
+        }
+      }
+  
+
+    .error-message {
+      color: $error-color;
+      font-size: 0.875rem;
+      margin-top: $spacing-unit / 4;
+      text-align: left;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}

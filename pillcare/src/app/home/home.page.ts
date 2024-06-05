@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Browser } from '@capacitor/browser';
-
 //import { Calendar } from '@awesome-cordova-plugins/calendar/ngx';
 
 @Component({
@@ -30,6 +29,9 @@ export class HomePage {
     await Browser.open({ url: 'https://www.pillcare.com' });
   }
 
+  async openTypes(){
+    await Browser.open({ url: 'https://www.medicinalliure.com/es/anticonceptivos-los-mas-eficaces/#:~:text=La%20p%C3%ADldora%20combinada%20es%20la,paradas%20entre%20ciclo%20y%20ciclo.' });
+  }
   async openWebPage() {
     await Browser.open({ url: 'https://www.imss.gob.mx/salud-en-linea/planificacion-familiar/pastillas-anticonceptivas' });
   }

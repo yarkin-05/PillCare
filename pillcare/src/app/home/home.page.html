@@ -41,7 +41,12 @@
     </text>
   </svg>
 
- 
+  <p style="font-size: 40px;
+  font-family:Brush Script MT, Brush Script Std, cursive;
+  color: #D85948;
+  text-align: center;
+  position: relative;
+  top: -650px">Bienvenida</p>
 
   <p style="font-size: 100px;
   font-family:'Times New Roman';
@@ -96,6 +101,7 @@
   </ion-button>
 
   <ion-button expand="block" 
+  (click)="openTypes()"
   fill="outline" 
   style="margin-left: 20%; 
   margin-right: 20%;
@@ -108,7 +114,7 @@
   font-weight: bold;
   position: relative;
   top: -800px"
-  [routerLink]="['/ajustes']">
-    <ion-icon slot="start" name="heart"></ion-icon>Ajustes
+  >
+    <ion-icon slot="start" name="heart"></ion-icon>Tipos de pastillas
   </ion-button>
   </ion-content>

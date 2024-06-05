@@ -1,0 +1,112 @@
+<ion-content [fullscreen]="true">
+  <ion-button expand="block" 
+  fill="outline" 
+  style="margin-left: 20%; 
+  margin-right: 20%;
+  color: #BFCBCD;
+  --background-activated: #e8edee;
+  --border-color: #BFCBCD;
+  --border-style: solid;
+  --border-width: 1px;
+  font-family:'Times New Roman'; 
+  font-weight: bold;
+  position: relative;
+  top: 20px"
+  [routerLink]="['/home']">
+    <ion-icon slot="start" name="heart"></ion-icon>Menu principal
+  </ion-button>
+
+  <p style="font-size: 20px;
+  font-family:'Times New Roman'; 
+  color: #BFCBCD;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  top: 40px">Nombre de la pastilla:</p>
+
+  <ion-input fill="outline"
+  placeholder="pastilla"
+  style="align-items: center;
+  --border-color: #BFCBCD;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin-left: 20%; 
+  margin-right: 20%;
+  font-family:'Times New Roman'; 
+  top: 30px"></ion-input>
+
+  <p style="font-size: 20px;
+  font-family:'Times New Roman'; 
+  color: #BFCBCD;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  top:40px">Dosis:</p>
+
+  <ion-input fill="outline"
+  type="number"
+  placeholder="xxx mg"
+  style="align-items: center;
+  --border-color: #BFCBCD;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin-left: 20%; 
+  margin-right: 20%;
+  font-family:'Times New Roman'; 
+  top: 30px"></ion-input>
+
+  <p style="font-size: 20px;
+  font-family:'Times New Roman'; 
+  color: #BFCBCD;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  top: 40px">Comentarios:</p>
+
+  <ion-input fill="outline"
+  style="
+  align-items: center;
+  --border-color: #BFCBCD;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin-left: 20%; 
+  margin-right: 20%;
+  font-family:'Times New Roman'; 
+  top: 30px"></ion-input>
+
+  <ion-button expand="block" 
+  fill="outline" 
+  style="margin-left: 20%; 
+  margin-right: 20%;
+  color: #BFCBCD;
+  --background-activated: #e8edee;
+  --border-color: #BFCBCD;
+  --border-style: solid;
+  --border-width: 1px;
+  font-family:'Times New Roman'; 
+  font-weight: bold;
+  position: relative;
+  top: 90px">
+    Agregar
+  </ion-button>
+
+  <ion-button expand="block" 
+  fill="outline" 
+  style="margin-left: 20%; 
+  margin-right: 20%;
+  color: #BFCBCD;
+  --background-activated: #e8edee;
+  --border-color: #BFCBCD;
+  --border-style: solid;
+  --border-width: 1px;
+  font-family:'Times New Roman'; 
+  font-weight: bold;
+  position: relative;
+  top: 100px"
+  [routerLink]="['/recordatorio']">
+    <ion-icon slot="start" name="heart"></ion-icon>Agregar recordatorio
+  </ion-button>
+</ion-content>

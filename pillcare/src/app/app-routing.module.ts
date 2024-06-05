@@ -8,20 +8,40 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'first',
     pathMatch: 'full'
+  },
+  {
+    path: 'nav',
+    loadChildren: () => import('./nav/nav.module').then( m => m.NavPageModule)
   },
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'sign-up',
-    loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   },
   {
-    path: 'password-reset',
-    loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
+    path: 'pastilla',
+    loadChildren: () => import('./pastilla/pastilla.module').then( m => m.PastillaPageModule)
+  },
+  {
+    path: 'recordatorio',
+    loadChildren: () => import('./recordatorio/recordatorio.module').then( m => m.RecordatorioPageModule)
+  },
+  {
+    path: 'ajustes',
+    loadChildren: () => import('./ajustes/ajustes.module').then( m => m.AjustesPageModule)
+  },
+  {
+    path: 'first',
+    loadChildren: () => import('./first/first.module').then( m => m.FirstPageModule)
+  },
+  {
+    path: 'auth-guard',
+    loadChildren: () => import('./auth-guard/auth-guard.module').then( m => m.AuthGuardPageModule)
   },
 ];
 

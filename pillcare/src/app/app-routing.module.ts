@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'first',
     loadChildren: () => import('./first/first.module').then( m => m.FirstPageModule)
   },
+  {
+    path: 'auth-guard',
+    loadChildren: () => import('./auth-guard/auth-guard.module').then( m => m.AuthGuardPageModule)
+  },
 ];
 
 @NgModule({

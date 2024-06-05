@@ -22,4 +22,9 @@ export class HomePage {
   onCloc(){
     console.log('cli')
   }
+
+  signOut(){
+    localStorage.removeItem('user');
+    this.router.navigateByUrl('/first');
+  }
 }

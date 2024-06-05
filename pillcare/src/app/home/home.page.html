@@ -1,5 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar
+  style="background-color: #BFCBCD;"
+  >
     <ion-title 
     style="font-size: xxx-large; 
       text-align: left; 
@@ -14,6 +16,9 @@
       font-weight: normal;">
       Pal</span>
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="signOut()">Sign Out</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

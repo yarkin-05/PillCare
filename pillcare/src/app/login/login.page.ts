@@ -24,17 +24,17 @@ export class LoginPage implements OnInit {
 
   public alertButtons = [
     {
-      text: 'Cancel',
+      text: 'Cancel', // The text displayed on the first button. When this button is clicked, the alert will be dismissed.
     },
     {
-      text:'Reset Password',
-      handler : (data: any) => {
-        console.log('Reset Password');
-        this.resetPassword(data);
+      text:'Reset Password', // The text displayed on the second button.
+      handler : (data: any) => { // The handler function that will be called when the second button is clicked.
+        console.log('Reset Password'); // Log 'Reset Password' for debugging purposes.
+        this.resetPassword(data); // Call the resetPassword method and pass the data from the alert's input field.
       }
-
     }
   ];
+  
   public alertInputs = [
     {
       name: 'email',
@@ -50,44 +50,41 @@ export class LoginPage implements OnInit {
     signInWithEmailAndPassword(this.auth, this.email, this.password)
     .then((userCredential) => {
       // Signed in 
-      const user = userCredential.user;
-      console.log(user);
+      const user = userCredential.user; // Get the user information from the user credential.
+      console.log(user); // Log the user information for debugging purposes.
       if(user.uid != undefined && user.uid != "" && user.emailVerified){
-        console.log('Email is verified');
-        this.navController.navigateRoot('home');
+        console.log('Email is verified'); // Log that the email is verified for debugging purposes.
+        this.navController.navigateRoot('/home'); // Navigate to the home page.
       }else{
-        console.log('Email is not verified');
-        this.presentAlert('Email is not verified');
+        console.log('Email is not verified'); // Log that the email is not verified for debugging purposes.
+        this.presentAlert('Email is not verified'); // Present an alert to the user that their email is not verified.
       }
-
-      // ...
     })
     .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode, errorMessage);
+      const errorCode = error.code; // Get the error code from the error.
+      const errorMessage = error.message; // Get the error message from the error.
+      console.log(errorCode, errorMessage); // Log the error code and message for debugging purposes.
       this.presentAlert("Invalid Email or Password");
     });
 
   }
 
   resetPassword( data:any ){
-
-    console.log(data);
-
+    console.log(data); // Log the data for debugging purposes.
+  
+    // Send a password reset email to the email address specified in the data.
     sendPasswordResetEmail(this.auth, data.email)
     .then(() => {
       // Password reset email sent!
-      console.log('Password reset email sent!');
-      this.presentAlert('Password reset email sent!');
+      console.log('Password reset email sent!'); // Log that the password reset email was sent for debugging purposes.
+      this.presentAlert('Password reset email sent!'); // Present an alert to the user that the password reset email was sent.
     })
     .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode, errorMessage);
-      this.presentAlert('Error sending password reset email: ' + error.message);
-
-      // ..
+      // An error happened.
+      const errorCode = error.code; // Get the error code from the error.
+      const errorMessage = error.message; // Get the error message from the error.
+      console.log(errorCode, errorMessage); // Log the error code and message for debugging purposes.
+      this.presentAlert('Error sending password reset email'); // Present an alert to the user that there was an error sending the password reset email.
     });
   }
 

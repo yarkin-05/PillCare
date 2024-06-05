@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Calendar } from '@awesome-cordova-plugins/calendar/ngx';
+import { Browser } from '@capacitor/browser';
+
+//import { Calendar } from '@awesome-cordova-plugins/calendar/ngx';
 
 @Component({
   selector: 'app-home',
@@ -18,26 +20,20 @@ export class HomePage {
  
     // Get the current pill
    pillName: string = "";
-  constructor(private router: Router, private calendar: Calendar) {}
+  constructor(private router: Router) {}
 
   ngOnInit(){
-    let startDate = new Date();
-    startDate.setHours(0, 0, 0, 0);
-
-    let endDate = new Date();
-    endDate.setHours(23, 59, 59, 999);
-
-    this.calendar.findEvent('', '', '', startDate, endDate).then((data) => {
-      console.log(data);
-      if(data.length > 0){
-        this.pillName = data[0].title;
-      }
-    
-    }).catch((error) => {
-      console.error(error);
-    });
+   
   }
   
+  async sendInquiry(){
+    await Browser.open({ url: 'https://www.pillcare.com' });
+  }
+
+  async openWebPage() {
+    await Browser.open({ url: 'https://www.imss.gob.mx/salud-en-linea/planificacion-familiar/pastillas-anticonceptivas' });
+  }
+
   navigateToPastilla(){
     this.router.navigateByUrl('/pastilla')
   }

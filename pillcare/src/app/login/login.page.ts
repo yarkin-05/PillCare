@@ -52,7 +52,7 @@ export class LoginPage implements OnInit {
       // Signed in 
       const user = userCredential.user; // Get the user information from the user credential.
       console.log(user); // Log the user information for debugging purposes.
-      if(user.uid != undefined && user.uid != "" && user.emailVerified){
+      if(user.uid != undefined && user.uid != ""){
         console.log('Email is verified'); // Log that the email is verified for debugging purposes.
         this.navController.navigateRoot('/home'); // Navigate to the home page.
       }else{
